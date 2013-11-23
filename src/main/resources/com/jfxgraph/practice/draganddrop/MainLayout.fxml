@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="mRoot" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.jfxgraph.practice.draganddrop.MainController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Label fx:id="m_drag" layoutX="104.0" layoutY="49.0" text="Drag Me">
+      <font>
+        <Font size="25.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Label fx:id="m_drop" font="$x1" layoutX="354.0" layoutY="49.0"  text="Drop On Me" />
+    <ImageView id="m_imageview" fx:id="m_imageView" fitHeight="150.0" fitWidth="200.0" layoutX="57.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true" />
+    <Label layoutX="29.0" layoutY="146.0" text="Drag a Image to this:">
+      <font>
+        <Font size="15.0" fx:id="x2" />
+      </font>
+    </Label>
+    <TextArea id="m_textarea" fx:id="m_textArea" layoutX="329.0" layoutY="195.0" prefWidth="200.0" wrapText="true" />
+    <Label font="$x2" layoutX="278.0" layoutY="146.0" text="Drag a TXT to this:" />
+  </children>
+</AnchorPane>
