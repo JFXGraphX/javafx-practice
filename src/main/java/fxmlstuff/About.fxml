@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import fxmlstuff.About?>
+<About id="aboutContent" xmlns:fx="http://javafx.com/fxml"
+    spacing="10" translateY="40" translateX="20" fx:controller="fxmlstuff.About">
+    <children>
+        <Label text="Add New Dock of About" />
+        <Button text="Add !" onAction="#handleButtonAction"  />
+    </children>
+</About>

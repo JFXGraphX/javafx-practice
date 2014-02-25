@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import fxmlstuff.Home?>
+
+<Home id="homeContent" xmlns:fx="http://javafx.com/fxml"        
+        spacing="10" translateY="40" translateX="20" fx:controller="fxmlstuff.Home" >
+    <children>
+        <Label text="Add New Dock of Home" />
+        <HBox spacing="10">
+            <children>                
+                <Button text="Add !" onAction="#handleAction"  />        
+                <Button text="Remove !" onAction="#handleRemoveAction"  />        
+            </children>
+        </HBox>        
+    </children>
+</Home>

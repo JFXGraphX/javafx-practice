@@ -1,0 +1,265 @@
+/* 
+    Document   : gui
+    Created on : Sep 10, 2012, 9:48:29 PM
+    Author     : msi
+    Description:
+        Purpose of the stylesheet follows.
+*/
+.choice-box .label {
+    -fx-padding:0;
+    -fx-text-fill: derive(white,20%);
+    -fx-font :  bold 13 default;
+}
+
+.button:disabled,choice-box:disabled{
+    -fx-background-color:
+	linear-gradient(to bottom, derive(gray,65%) 2%, derive(gray,-50%) 95%),
+	derive(white,-70%),	
+	linear-gradient(to bottom, derive(gray,15%) 50%, derive(gray,-20%) 95%),
+	linear-gradient(to bottom, derive(gray,55%) 90%, derive(gray,-20%) 95%);
+}
+.button,.choice-box{
+	
+	-fx-background-color:
+	linear-gradient(to bottom, derive(black,65%) 2%, derive(white,-50%) 95%),
+	derive(white,-70%),	
+	linear-gradient(to bottom, derive(gray,15%) 50%, derive(black,-20%) 95%),
+	linear-gradient(to bottom, derive(black,55%) 90%, derive(black,-20%) 95%);
+
+	/*-fx-font : regular 14 default;*/
+	-fx-font :  bold 13 default;
+	-fx-text-fill: derive(white,20%);
+	-fx-padding: 6 10 5 10;
+}
+
+.button:focused,.choice-box:showing{
+	
+    -fx-background-color:
+	linear-gradient(to bottom, derive(black,65%) 2%, derive(white,-50%) 95%),
+	derive(white,60%),	
+	linear-gradient(to bottom, derive(gray,15%) 50%, derive(black,-20%) 95%),
+	linear-gradient(to bottom, derive(black,55%) 90%, derive(black,-20%) 95%);
+	-fx-text-fill: derive(white,20%);
+    
+}
+
+.button:hover,.choice-box:hover{
+	
+	-fx-background-color: 
+	linear-gradient(to bottom, derive(black,65%) 2%, derive(black,-20%) 95%),
+	derive(gray,20%),
+	linear-gradient(to bottom, derive(white,15%) 50%, derive(black,-20%) 95%),
+	linear-gradient(to bottom, derive(black,55%) 90%, derive(black,-20%) 95%); 
+	
+	-fx-effect: dropshadow(gaussian, white, 10,0.1,0,0);
+	/*-fx-font : regular 14 default;*/
+	-fx-font :  bold 13 default;
+	-fx-text-fill: derive(white,40%);
+	-fx-padding: 6 10 5 10;
+}
+.combo-button:hover{
+   -fx-background-color: 
+	linear-gradient(to bottom, derive(black,65%) 2%, derive(black,-20%) 95%),
+	derive(gray,20%),
+	linear-gradient(to bottom, derive(black,15%) 50%, derive(black,-20%) 95%),
+	linear-gradient(to bottom, derive(black,55%) 90%, derive(black,-20%) 95%); 
+   -fx-effect: null;
+}
+.button-green{
+    
+    -fx-background-color:
+	linear-gradient(to bottom, derive(green,65%) 2%, derive(white,-50%) 95%),
+	derive(white,-70%),	
+	linear-gradient(to bottom, derive(green,15%) 50%, derive(green,-20%) 95%),
+	linear-gradient(to bottom, derive(green,55%) 90%, derive(green,-20%) 95%);
+
+}
+
+.button-green:hover{
+	
+	-fx-background-color: 
+	linear-gradient(to bottom, derive(black,65%) 2%, derive(black,-20%) 95%),
+	derive(gray,20%),
+	linear-gradient(to bottom, derive(white,15%) 50%, derive(black,-20%) 95%),
+	linear-gradient(to bottom, derive(green,55%) 90%, derive(green,-20%) 95%); 
+
+}
+.button-green:focused{
+     -fx-background-color:
+	linear-gradient(to bottom, derive(green,65%) 2%, derive(white,-50%) 95%),
+	derive(white,60%),	
+	linear-gradient(to bottom, derive(green,15%) 50%, derive(green,-20%) 95%),
+	linear-gradient(to bottom, derive(green,55%) 90%, derive(green,-20%) 95%);
+}
+.main-pane{
+	-fx-background-color:
+    
+	linear-gradient(to bottom, derive(white,-10%) 50%, derive(white,-25%) 100%);
+	-fx-background-insets: 10; 
+	
+        
+	-fx-effect: dropshadow(gaussian, gray, 10,0.1,0,0);
+}
+
+.title{
+    -fx-color:black;
+    -fx-padding:10px;
+    -fx-background-radius: 5;
+     -fx-background-color:
+        gray,
+        white,        
+        linear-gradient(to bottom,  #e6e6e6 0%, #f6f6f5 100%),
+        /*transparent;*/
+        linear-gradient(from 40% -210% to 50% 190% ,  transparent 70% , derive(white,-3%) 70% , transparent 80.0%);
+    /*-fx-background-insets: 0,1,1;*/
+    
+    -fx-smooth: true;
+}
+
+.accordion{
+	-fx-animated: true;
+        -fx-padding:0 0 40px 0;
+}
+
+ .titled-pane{
+    -fx-animated:true;
+    -fx-padding:10 10 2 20; 
+ }
+ .accordion .titled-pane:focused {
+    -fx-text-fill: black;
+}
+
+
+.titled-pane .content  {
+    -fx-color:derive(black,90%);
+    -fx-background-insets: 0 10 0 13;
+    -fx-background-color:    
+	linear-gradient(to bottom, derive(white,-10%) 50%, derive(white,-25%) 90%, derive(white,-3%) 100%);
+    -fx-border-color: gray; 
+    -fx-border-radius: 0 0 16 16;
+    -fx-border-width: 0px;
+    
+    -fx-effect: dropshadow(gaussian, black, 10,0.1,0,0);
+    -fx-padding:0 10 0 10;
+        
+      
+    
+}
+
+.option-btn-pane{
+    -fx-padding:10 0 0 0;
+    -fx-background-color:	
+    linear-gradient(to bottom, transparent 5%,derive(gray,95%) 5%, derive(white,100%)10%);
+} 
+.back-pane{
+    -fx-color:white;
+    -fx-background-color:	
+     white, 
+    linear-gradient(to bottom, derive(transparent,95%) 0%, derive(white,100%)50%),
+    linear-gradient(to right, derive(gray,50%) 0%, derive(transparent,100%)3%),
+    linear-gradient(to bottom,  derive(white,100%)0%, derive(transparent,100%) 60%, derive(white,100%) 80%);
+}
+/*
+.choice-box,.choice-box:hover,.choice-box:focused,.choice-box .open-button{
+    -fx-color: derive(gray,-30%);
+}*/
+.tool-bar:horizontal{
+	
+	-fx-background-color:	
+        linear-gradient(to bottom, derive(gray,65%) 2%, derive(gray,-70%) 95%),
+	white,
+	linear-gradient(to bottom, derive(black,65%) 2%, derive(black,-20%) 95%),
+	linear-gradient(to bottom, derive(gray,-15%) 20%, derive(gray,-55%) 90%, derive(gray,-30%) 100%);
+	
+	-fx-effect: dropshadow(gaussian, derive(gray,60%), 3,0.1,0,4);
+}
+
+.box-effects{
+    -fx-padding:10 0 10 0;
+    -fx-spacing:10px;
+    -fx-fill-width: true;
+    -fx-alignment: center;
+}
+
+.scroll-effects {
+    -fx-border-width: 0px;    
+    -fx-background-color: transparent;
+}
+
+/* The main scrollbar **track** CSS class  */
+.scroll-effects > * > .scroll-bar:vertical,.scroll-effects > * > .scroll-bar:vertical .track{
+	-fx-background-color: transparent;
+	/*-fx-border-color:transparent;*/
+	/*-fx-background-radius: 0em;*/
+        /*-fx-border-width: 0px;*/
+	/*-fx-border-radius:2em;*/
+}
+
+/* The increment and decrement button CSS class of scrollbar */
+.scroll-effects > * > .scroll-bar:horizontal .increment-button ,
+.scroll-effects > * > .scroll-bar:horizontal .decrement-button {
+    -fx-background-color:transparent;
+	-fx-background-radius: 0em;
+	-fx-padding:0 0 10 0;
+
+}
+
+/* The increment and decrement button CSS class of scrollbar */
+
+.scroll-effects > * > .scroll-bar:vertical .increment-button ,
+.scroll-effects > * >.scroll-bar:vertical .decrement-button {
+
+    -fx-background-color:transparent;
+	-fx-background-radius: 0em;
+	-fx-padding:0 10 0 0;
+
+}
+
+.scroll-effects > * > .scroll-bar .increment-arrow,
+.scroll-effects > * >  .scroll-bar .decrement-arrow
+ {
+	-fx-shape: " ";	
+	-fx-padding:0;
+}
+
+
+/* The main scrollbar **thumb** CSS class which we drag every time (movable) */
+
+.scroll-effects > * > .scroll-bar:vertical .thumb:hover {                                                   
+     -fx-background-color:derive(white,90%);
+     -fx-opacity:1;
+}
+.scroll-effects > * > .scroll-bar:vertical .thumb {
+        -fx-background-color:derive(white,90%);
+	-fx-background-insets: 2, 0, 0;
+	-fx-border-color: black;
+        -fx-background-radius: 0px;
+        -fx-opacity:0.3;
+
+}
+.xtra-option{
+    -fx-background-color:    
+    linear-gradient(to bottom, derive(black,40%) 50%, derive(black,15%) 100%);
+    -fx-background-insets: 0; 
+
+    -fx-opacity: 0.7;
+    -fx-effect: dropshadow(gaussian, black, 10,0.1,0,0);
+}
+.back-pane .slider{
+    -fx-color:#787878;
+    background-color: #787878;
+}
+.xtra-option .slider .track{
+    -fx-color:#99ff00;
+    top: 10px;
+    
+    background-color: #99ff00;
+}
+.blurpart{
+    -fx-fill:black;
+}
+.help-close:hover{
+    -fx-effect: dropshadow(gaussian, red, 10,0.1,0,0);
+
+}
+

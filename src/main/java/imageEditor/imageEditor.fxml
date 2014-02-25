@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" fx:id="pane_main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="458.0" prefWidth="664.0" xmlns:fx="http://javafx.com/fxml" fx:controller="imageEditor.ImageEditorController">
+  <children>
+    <StackPane id="stackPane1" fx:id="pane_img" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="363.0" prefWidth="429.0" AnchorPane.bottomAnchor="47.5" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="226.0" AnchorPane.topAnchor="47.5">
+      <effect>
+        <DropShadow color="#3f3f3f" height="29.095236647696723" radius="14.047618685733704" spread="0.1666666666666667" width="29.095238095238095" />
+      </effect>
+    </StackPane>
+    <AnchorPane id="anchorPane2" fx:id="pane_option_status" prefHeight="42.0" prefWidth="446.0" AnchorPane.bottomAnchor="-6.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="218.0">
+      <children>
+        <Slider id="sliderHorizontal1" fx:id="slider_zoom" blockIncrement="0.01" max="3.0" min="0.5" value="1.0" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="156.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="9.0" />
+        <Label id="label7" alignment="CENTER" contentDisplay="CENTER" layoutY="-7.0" prefHeight="16.0" prefWidth="428.0" text="Zoom" AnchorPane.leftAnchor="173.0" AnchorPane.rightAnchor="167.0" />
+        <Button id="button4" fx:id="sdf" layoutY="5.0" onAction="#resetZoom" prefHeight="26.0" prefWidth="68.0" text="Default" AnchorPane.rightAnchor="70.0" />
+      </children>
+    </AnchorPane>
+    <AnchorPane id="anchorPane3" fx:id="pane_option" minHeight="0.0" minWidth="0.0" prefHeight="419.0" prefWidth="217.00009999999747" styleClass="back-pane" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="39.0">
+      <children>
+        <Accordion id="accordion1" minWidth="313.0" prefHeight="348.0" prefWidth="387.0" AnchorPane.bottomAnchor="56.0" AnchorPane.leftAnchor="-7.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+          <expandedPane>
+            <TitledPane id="titledPane3" fx:id="x1" animated="false" text="Effects">
+              <content>
+                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="281.0" prefWidth="376.0">
+                  <children>
+                    <ScrollPane id="scrollPane1" fitToWidth="true" layoutX="6.0" prefHeight="204.0" prefWidth="159.0" styleClass="scroll-effects" AnchorPane.bottomAnchor="9.0" AnchorPane.topAnchor="2.0">
+                      <content>
+                        <VBox id="vBox1" fx:id="box_effects" prefHeight="198.0" prefWidth="157.0" styleClass="box-effects" />
+                      </content>
+                    </ScrollPane>
+                  </children>
+                </AnchorPane>
+              </content>
+            </TitledPane>
+          </expandedPane>
+          <panes>
+            <TitledPane id="titledPane1" fx:id="x2" animated="false" minWidth="173.0" prefHeight="300.5" prefWidth="224.0" text="Exposure">
+              <content>
+                <AnchorPane id="Content" maxHeight="236.0" minHeight="0.0" minWidth="0.0" prefHeight="236.0" prefWidth="358.0">
+                  <children>
+                    <Label id="label2" layoutY="25.0" text="Brightness" AnchorPane.leftAnchor="32.0" />
+                    <Slider id="sliderHorizontal2" fx:id="slider_bright" blockIncrement="0.01" layoutY="50.0" max="1.0" min="-1.0" prefHeight="14.0" prefWidth="310.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="23.0" />
+                    <Label id="label3" layoutY="97.0" text="Contrast" AnchorPane.leftAnchor="32.0" />
+                    <Slider id="sliderHorizontal3" fx:id="slider_cont" blockIncrement="0.01" layoutY="121.0" max="1.0" min="-1.0" prefHeight="14.0" prefWidth="303.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="30.0" />
+                    <Label id="label6" layoutY="156.0" text="Glow" AnchorPane.leftAnchor="32.0" />
+                    <Slider id="sliderHorizontal6" fx:id="slider_glow" blockIncrement="0.01" layoutY="179.0" max="1.0" prefHeight="14.0" prefWidth="303.0000999999975" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="29.0" />
+                  </children>
+                </AnchorPane>
+              </content>
+            </TitledPane>
+            <TitledPane id="titledPane2" fx:id="x4" animated="false" text="Color">
+              <content>
+                <AnchorPane id="Content" maxHeight="160.0" minHeight="0.0" minWidth="0.0" prefHeight="170.0" prefWidth="358.0">
+                  <children>
+                    <Slider id="sliderHorizontal4" fx:id="slider_hue" blockIncrement="0.01" layoutY="44.0" max="1.0" min="-1.0" prefHeight="14.0" prefWidth="303.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="30.0" />
+                    <Label id="label4" layoutY="20.0" text="Hue" AnchorPane.leftAnchor="33.0" />
+                    <Label id="label5" layoutY="92.0" text="Saturation" AnchorPane.leftAnchor="33.0" />
+                    <Slider id="sliderHorizontal5" fx:id="slider_sat" blockIncrement="0.01" layoutY="118.0" max="1.0" min="-1.0" prefHeight="14.0" prefWidth="300.0" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="31.0" />
+                  </children>
+                </AnchorPane>
+              </content>
+            </TitledPane>
+            <fx:reference source="x1" />
+          </panes>
+        </Accordion>
+        <Button id="button5" fx:id="btn_reset" onAction="#reset" text="Reset" AnchorPane.bottomAnchor="18.0" AnchorPane.rightAnchor="14.0">
+          <tooltip>
+            <Tooltip id="tooltip3" text="Reset all changes" />
+          </tooltip>
+        </Button>
+        <ChoiceBox id="choiceBox2" fx:id="select_states" onMouseClicked="#loadStates" prefHeight="26.0" prefWidth="120.0" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="16.0">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Item 1" />
+              <String fx:value="Item 2" />
+              <String fx:value="Item 3" />
+            </FXCollections>
+          </items>
+          <tooltip>
+            <Tooltip id="tooltip8" text="Undo Changes" />
+          </tooltip>
+        </ChoiceBox>
+        <Button id="button6" fx:id="btn_save_state" onAction="#saveState" prefHeight="26.0" prefWidth="91.0" text="Save State" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="111.0">
+          <tooltip>
+            <Tooltip id="tooltip2" text="Quick Save your state" />
+          </tooltip>
+        </Button>
+      </children>
+    </AnchorPane>
+    <AnchorPane id="anchorPane4" fx:id="pane_blur" opacity="0.0" prefHeight="362.9999000000025" prefWidth="217.0" AnchorPane.bottomAnchor="57.0" AnchorPane.rightAnchor="-216.0" AnchorPane.topAnchor="40.0" />
+    <ToolBar id="toolBar1" fx:id="tool_bar" minHeight="26.0" prefHeight="42.0" prefWidth="500.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="-3.0">
+      <items>
+        <Button id="button2" fx:id="btn_capture" onAction="#reCapture" text="Re-Capture">
+          <tooltip>
+            <Tooltip id="tooltip5" text="Re-capture Region" />
+          </tooltip>
+        </Button>
+        <Button id="button3" fx:id="btn_live" onAction="#goLive" text="Go Live">
+          <tooltip>
+            <Tooltip id="tooltip4" text="Capture Image from Live Desktop" />
+          </tooltip>
+        </Button>
+        <Separator id="separatorVertical1" orientation="VERTICAL" prefHeight="21.0" prefWidth="3.0" />
+        <Label id="label1" text="Format">
+          <textFill>
+            <Color blue="0.875" green="0.875" red="0.875" fx:id="x3" />
+          </textFill>
+        </Label>
+        <ChoiceBox id="choiceBox1" fx:id="select_img_format">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Item 1" />
+              <String fx:value="Item 2" />
+              <String fx:value="Item 3" />
+            </FXCollections>
+          </items>
+          <tooltip>
+            <Tooltip id="tooltip6" text="Image file format" />
+          </tooltip>
+        </ChoiceBox>
+        <Separator id="separatorVertical2" orientation="VERTICAL" prefHeight="200.0" />
+        <Button id="button1" fx:id="btn_save" onAction="#saveImage" text="Save">
+          <tooltip>
+            <Tooltip id="tooltip7" text="Save to Computer" />
+          </tooltip>
+        </Button>
+      </items>
+    </ToolBar>
+    <AnchorPane id="anchorPane1" fx:id="pane_level" layoutY="229.0" minHeight="97.0" prefHeight="97.0" prefWidth="200.0" styleClass="xtra-option" AnchorPane.rightAnchor="-203.0">
+      <children>
+        <Slider id="sliderHorizontal7" fx:id="slider_level" blockIncrement="0.01" prefHeight="14.0" prefWidth="174.0" AnchorPane.bottomAnchor="31.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="52.0" />
+        <Label id="label8" prefHeight="16.0" prefWidth="172.0" text="Level" textFill="$x3" AnchorPane.bottomAnchor="56.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="25.0" />
+      </children>
+    </AnchorPane>
+    <Button id="button7" onAction="#goAbout" text="?" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="6.0">
+      <tooltip>
+        <Tooltip id="tooltip1" text="About" />
+      </tooltip>
+    </Button>
+    <AnchorPane id="anchorPane4" fx:id="pane_blur_main" prefHeight="460.9999000000025" prefWidth="663.9998779296875" visible="false" AnchorPane.bottomAnchor="-3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+    <AnchorPane id="anchorPane5" fx:id="pane_about" layoutX="144.0" layoutY="93.0" prefHeight="334.0" prefWidth="373.0" styleClass="xtra-option" visible="false">
+      <children>
+        <Rectangle id="rectangle1" arcHeight="10.0" arcWidth="10.0" fill="#404040" height="97.0" layoutX="11.0" layoutY="226.0" strokeType="INSIDE" strokeWidth="0.0" width="353.0">
+          <effect>
+            <InnerShadow height="36.21825396825397" radius="17.609126984126984" width="36.21825396825397" />
+          </effect>
+          <stroke>
+            <Color blue="0.749" green="0.749" red="0.749" fx:id="x5" />
+          </stroke>
+        </Rectangle>
+        <Text id="text1" fill="WHITE" layoutX="157.0" layoutY="38.0" stroke="$x3" strokeWidth="0.4" text="About">
+          <effect>
+            <Lighting specularConstant="2.0" specularExponent="6.984126984126985" surfaceScale="0.7380952380952381">
+              <bumpInput>
+                <Shadow />
+              </bumpInput>
+              <light>
+                <javafx.scene.effect.Light.Distant />
+              </light>
+            </Lighting>
+          </effect>
+          <font>
+            <Font name="System Bold" size="23.0" />
+          </font>
+        </Text>
+        <Label id="label9" layoutX="28.0" layoutY="243.0" text="Developed By" textFill="$x3" />
+        <Label id="label9" layoutX="118.0" layoutY="243.0" text="Narayan G. Maharjan" textFill="$x3" />
+        <Label id="label9" layoutX="28.0" layoutY="267.0" text="Website" textFill="$x3" />
+        <Hyperlink id="hyperlink1" layoutX="118.0" layoutY="263.0" onAction="#openBrowser" text="http://apps.ngopal.com.np/feather_edit" textFill="$x3" />
+        <Label id="label9" layoutX="28.0" layoutY="290.0" text="Support" textFill="$x3" />
+        <Label id="label9" layoutX="122.0" layoutY="242.0" textFill="$x3" />
+        <Hyperlink id="hyperlink1" layoutX="120.0" layoutY="286.0" onAction="#openMail" text="fe@apps.ngopal.com.np" textFill="$x3" />
+        <Rectangle id="rectangle2" fx:id="help_close" arcHeight="5.0" arcWidth="5.0" fill="RED" height="20.0" layoutX="332.0" layoutY="-1.0" onMouseClicked="#hideAbout" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="help-close" width="28.0" />
+        <ImageView id="splash.jpg" fitHeight="47.5700046020671" fitWidth="213.00001525878906" layoutX="84.0" layoutY="54.0" preserveRatio="true">
+          <effect>
+            <DropShadow color="WHITE" spread="0.15873015873015872" />
+          </effect>
+          <image>
+            <Image url="@img/splash.png" preserveRatio="true" smooth="true" />
+          </image>
+        </ImageView>
+        <Separator id="separatorHorizontal1" layoutX="21.0" layoutY="54.0" prefHeight="3.0" prefWidth="335.0" />
+        <Label id="label10" text="v. 1.0" textFill="$x5" AnchorPane.bottomAnchor="17.0" AnchorPane.rightAnchor="16.0" />
+        <TextArea id="textArea1" fx:id="txt_feed" layoutX="20.0" layoutY="120.0" prefHeight="89.0" prefWidth="338.0" text="Your opinion&#10;" wrapText="true" />
+        <Button id="button8" fx:id="btn_feed" layoutY="200.0" onAction="#feedback" text="Send Feedback" AnchorPane.leftAnchor="133.0" AnchorPane.rightAnchor="124.0" />
+      </children>
+    </AnchorPane>
+  </children>
+  <stylesheets>
+    <URL value="@css/gui.css" />
+  </stylesheets>
+</AnchorPane>

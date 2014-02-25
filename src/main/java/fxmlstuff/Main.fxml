@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import fxmlstuff.Main?>
+<?import javafx.geometry.Insets?>
+
+<Main xmlns:fx="http://javafx.com/fxml" fx:controller="fxmlstuff.Main">
+    <padding>
+        <Insets right="10"/>
+    </padding>
+    <fx:define>
+        <fx:include source="Home.fxml" fx:id="homeContent" />
+        <fx:include source="About.fxml" fx:id="aboutContent" />        
+   </fx:define>
+    <center>        
+        <TabPane fx:id="tabpane" translateY="5" translateX="5"  >
+            <tabs>                                
+                <Tab text="HOME" fx:id="homeTab" content="$homeContent" closable="false" />
+                <Tab text="ABOUT" fx:id="aboutTab" content="$aboutContent" closable="false"/>                               
+            </tabs>
+        </TabPane>
+    </center>
+
+    <!-- This is the bottom part containing Dock Panel -->
+    <bottom>
+        <StackPane translateY="-30" visible="true">
+            <effect>
+                <Reflection topOpacity="0.7" fraction="0.8" topOffset="-30"/>
+            </effect>
+            <children>               
+                <!-- Dock Panel as Shape -->                
+                <Polygon fx:id="dock_bottom" />                
+                <!-- Dock Items Panel -->                
+                <FlowPane hgap="20" translateY="-25" fx:id="dockPanel" alignment="TOP_CENTER" />                              
+            </children>
+
+        </StackPane>
+    </bottom>
+</Main>

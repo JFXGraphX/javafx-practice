@@ -1,0 +1,24 @@
+
+.split-pane {
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.split-pane-divider{
+    -fx-background-color: rgb(41,41,41);
+    -fx-background-insets: 0 0 0 0;
+    -fx-padding: 0 1 0 0;
+    -fx-border-color: null;
+}
+
+.content-pane{
+    -fx-background-color: rgb(224,228,234);
+}
+.alt-content-pane{
+    -fx-background-color: linear-gradient(rgb(239,239,239) 0%, rgb(198,198,198) 100%);
+}
+
+.navigation-button{
+    -fx-background-color: transparent;
+    -icons-color: linear-gradient(rgb(239,239,239) 0%, rgb(198,198,198) 100%);
+}
